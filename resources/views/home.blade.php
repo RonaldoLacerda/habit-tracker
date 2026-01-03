@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>
-    {{ config('app.name') }}
-  </title>
+<x-layout>
 
-  @vite('resources/css/app.css')
+    <main class="py-10">
 
-</head>
-<body>
+      <h1>Welcome, {{ $nome }}!</h1>
 
-  <h1 class="text-3xl font-bold underline">
-    Hello, {{ $nome }}!
-
-  </h1>
-
-</body>
-</html>
+      <h2>Your Habits:</h2>
+      <ul>
+          @foreach ($habits as $habit)
+              <li>{{ $habit }}</li>
+          @endforeach
+      </ul>
+    </main>
+</x-layout>
