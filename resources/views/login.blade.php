@@ -10,7 +10,7 @@
         Insira seus dados para acessar.
       </p>
 
-      <form action="/login" method="POST" class="flex flex-col">
+      <form action="{{ route('auth.login') }}" method="POST" class="flex flex-col">
         @csrf
 
         <div class="flex flex-col gap-2 mb-4">
@@ -55,6 +55,13 @@
         >
           Entrar
         </button>
+
+        <p class="text-center mt-4">
+          Ainda não tem um conta?
+          <a href="{{ route('site.register') }}" class="underline hover:opacity-70 transition">
+            Cadastre-se
+          </a>
+        </p>
 
       </form>
     </section>
