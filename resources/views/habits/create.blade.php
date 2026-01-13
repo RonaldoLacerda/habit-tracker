@@ -6,7 +6,7 @@
       Cadastrar novo hábito
     </h1>
     <section class="bg-white max-w-[600px] mx-auto p-10 border-2 mt-4">
-      <form action="{{ route('habit.store') }}" method="POST">
+      <form action="{{ route('habits.store') }}" method="POST">
         @csrf
 
         <div class="flex flex-col gap-2 mb-4">
